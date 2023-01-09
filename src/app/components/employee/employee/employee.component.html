@@ -1,0 +1,14 @@
+<div class="container">
+    <button type="button" [routerLink]="['/home']" class="btn btn-secondary mt-4 mb-5">Back</button>
+
+
+    <ul ngbNav #nav="ngbNav" class="nav-tabs ">
+        <li ngbNavItem>
+            <a ngbNavLink>List</a>
+            <ng-template ngbNavContent>
+                <app-employee-list></app-employee-list>
+            </ng-template>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+</div>
